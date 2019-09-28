@@ -1,0 +1,41 @@
+代码说明：
+tf_idf.py       计算tf-idf向量和商品间的相似度
+model1.py   模型一
+model2.py   模型二
+match.py     模型三
+params.py   一些变量的说明，方便调用
+data.py        类间搭配集的整合
+main.py       模型的融合
+application.py    最终的应用代码，商品搭配进行可视化
+train.pkl       聚类模型
+
+
+使用：
+由于数据过大，运行时间较长，采用多模块结构
+
+先运行model1.py model2.py match.py 分别得到三个模型的搭配子集
+实时计算商品搭配运行main.py
+
+对商品搭配进行可视化运行applicaiton.py
+运行前需要将所有图片文件置于当前目录的pics文件夹下
+
+数据集说明：
+dim_fashion_matchsets(new).txt    搭配集
+dim_item(new).txt                           商品集
+user_bought_history.txt                  用户历史购买
+cluster_file.rar                                  聚类后的tf_idf向量压缩包（解压数据大概88G)
+tianchi_fm_img3_1.zip                     图片文件部分（原图片文件过大）
+
+其他txt文件运行生成的一些结果txt
+new_match_list.txt            整合后新的搭配集
+fashion_catogory_list.txt   类间表
+new_fashion_catogory_list.txt  整合后的类间表
+model1_result.txt                 模型一搭配子集
+model2_result.txt                 模型二搭配子集
+model3_result.txt                 模型三搭配子集
+match_result.txt                   最终搭配集
+
+
+
+
+
